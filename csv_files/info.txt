@@ -1,0 +1,7 @@
+Essa pasta recebe os arquivos CSV que contêm ID e nome da UF.
+
+Exemplo: 
+3100104,Abadia dos Dourados
+3100203,Abaeté
+3100302,Abre Campo
+3100401,Acaiaca
