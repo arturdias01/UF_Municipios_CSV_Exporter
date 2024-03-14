@@ -1,0 +1,17 @@
+Esse exercício solicita o desenvolvimento de um software que realiza duas funções:
+
+I - Utilizando a API do IBGE, o programa precisa ser capaz de recuperar a lista de municípios de uma determinada Unidade Federativa (UF) fornecida como entrada.
+
+    Entrada = algum estado.
+    saída = Lista de municipios daquele estado.
+
+---------------------------------------------------
+
+II - Os dados obtidos devem ser armazenados em um arquivo CSV (Comma Separated Values), que é um formato de arquivo de texto simples onde os valores são separados por vírgulas. O nome do arquivo deve seguir o padrão "ListaCidades" + UF + ".csv", onde UF é a sigla da Unidade Federativa fornecida. Os dados a serem gravados no arquivo CSV são o código do município e o nome do município.
+
+    Então o nome de cada arquivo deve ser: ListaCidades<MG>.csv
+    Deve ser gravado no arquivo o codigo do município + nome do municipio 
+
+---------------------------------------------------
+
+Portanto, o objetivo é criar um programa que, dado o código da UF, obtém a lista de municípios correspondente através da API do IBGE e, em seguida, armazena esses dados em um arquivo CSV com o nome adequado e os campos especificados.   
