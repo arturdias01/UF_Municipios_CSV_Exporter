@@ -1,6 +1,8 @@
 import requests
 import csv
 import shutil
+import os
+
 
 
 class Uf_requests: 
@@ -9,7 +11,8 @@ class Uf_requests:
         self.link = f"https://servicodados.ibge.gov.br/api/v1/localidades/estados/{self.uf.upper()}/municipios"
         self.data = requests.get(self.link).json()
         self.lista_municipios = []
-        self.csv_files = "C:\\Users\\artur\\OneDrive\\Área de Trabalho\\Meus Arquivos\\Programação\\Faculdade\\Marcio - Trabalho I\\csv_files"
+        self.csv_files = os.path.dirname(os.path.abspath(__file__))
+        self.csv_files_path = os.path.join(self.csv_files, 'csv_files')
 
 
     def print_municipios(self):  # Usar apenas para realizar testes
@@ -30,6 +33,6 @@ class Uf_requests:
             for municipio in self.lista_municipios:
                 escritor.writerow(municipio)
 
-        shutil.move(f'ListaCidades{self.uf.upper()}.csv', self.csv_files)  # Move o arquivo para a pasta csv_files
+        shutil.move(f'ListaCidades{self.uf.upper()}.csv', 'csv_files')  # Move o arquivo para a pasta csv_files     
         print(f'\nO arquivo foi movido para a pasta csv_files.\n')
-
+              
